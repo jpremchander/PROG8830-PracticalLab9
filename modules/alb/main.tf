@@ -1,4 +1,3 @@
-# ALB Module (modules/alb/main.tf)
 resource "aws_lb" "app_alb" {
   name               = "app-alb"
   internal           = false
@@ -19,7 +18,6 @@ resource "aws_lb_target_group_attachment" "attach" {
   target_id        = var.instance_id
   port             = 80
 }
-
 
 resource "aws_lb_listener" "http" {
   load_balancer_arn = aws_lb.app_alb.arn

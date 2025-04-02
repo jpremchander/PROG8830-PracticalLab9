@@ -1,5 +1,4 @@
 variable "vpc_id" {}
-
 variable "ec2_sg_name" {
   default = "ec2-security-group"
 }

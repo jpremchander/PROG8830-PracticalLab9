@@ -1,3 +1,4 @@
+# Define the DB Subnet Group
 resource "aws_db_subnet_group" "db_subnet_group" {
   name       = var.db_subnet_group_name
   subnet_ids = var.subnet_ids
@@ -7,11 +8,13 @@ resource "aws_db_subnet_group" "db_subnet_group" {
   }
 }
 
+# Define the DB Parameter Group
 resource "aws_db_parameter_group" "db_parameter_group" {
   name   = var.db_parameter_group_name
   family = var.db_family
 }
 
+# Define the RDS PostgreSQL Instance
 resource "aws_db_instance" "postgres_db" {
   identifier             = var.db_identifier
   engine                 = "postgres"
@@ -30,3 +33,4 @@ resource "aws_db_instance" "postgres_db" {
     Name = var.db_identifier
   }
 }
+

@@ -22,7 +22,7 @@ resource "aws_security_group" "lb_sg" {
 # EC2 Security Group
 resource "aws_security_group" "ec2_sg" {
   name        = var.ec2_sg_name
-  description = "Security group for EC2"
+  description = "Security group EC2"
   vpc_id      = var.vpc_id
 
   ingress {

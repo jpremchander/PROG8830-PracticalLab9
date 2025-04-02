@@ -1,14 +1,12 @@
-Terraform Practical Lab 8
-<<<<<<< HEAD
+Terraform Practical Lab 9
 
 Description:
 
 The project highlights some of the advanced capabilities of Terraform such as loops (count and for_each) functions, expressions, and modular configurations. The infrastructure configuration is given below:
-=======
+=================================================================================================================================================================================================
 Description:
 
 The project highlights some of the advanced capabilities of Terraform such as loops (count and for_each), functions, expressions, and modular configurations. The infrastructure configuration is given below:
->>>>>>> 16c2a0ae5e5f04165f184e6ccc3c5a5a15048c7d
 
 Multiple EC2 instances launched using loops.
 

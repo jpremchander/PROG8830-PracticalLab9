@@ -32,3 +32,8 @@ variable "key_name" {
   description = "EC2 instance key name"
   type = string
 }
+
+variable "db_username" {
+  description = "The master username for the PostgreSQL DB instance"
+  type        = string
+}

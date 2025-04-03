@@ -1,4 +1,4 @@
-ami_id             = "ami-0d5f18fbcad6fd6d6"
+ami_id             = "ami-07f7608a8efba8d78"
 cidr_block         = "10.0.0.0/16"
 instance_type      = "t3.micro"
 subnet_cidr_1a     = "10.0.1.0/24"

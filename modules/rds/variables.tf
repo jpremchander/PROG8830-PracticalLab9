@@ -1,60 +1,92 @@
-variable "db_subnet_group_name" {
-  description = "name of the DB subnet group"
-  type        = string
-}
-
 variable "subnet_ids" {
-  description = "List of subnet IDs for RDS"
+  description = "List of subnet IDs for the DB instance"
   type        = list(string)
 }
 
-variable "db_parameter_group_name" {
-  description = "name of the DB parameter group"
+variable "db_instance_class" {
+  description = "The DB instance class"
   type        = string
 }
 
-variable "db_family" {
-  description = "DB engine family"
-  type        = string
-}
-
-variable "db_identifier" {
-  description = "DB instance identifier"
+variable "db_engine" {
+  description = "The DB engine (e.g., mysql, postgres)"
   type        = string
 }
 
 variable "db_engine_version" {
-  description = "DB engine version"
+  description = "The DB engine version"
   type        = string
-}
-
-variable "db_instance_class" {
-  description = "DB instance class"
-  type        = string
-}
-
-variable "db_storage" {
-  description = "allocated storage for the DB instance"
-  type        = number
 }
 
 variable "db_username" {
-  description = "DB username"
+  description = "The RDS database username"
   type        = string
 }
 
 variable "db_password" {
-  description = "DB password"
+  description = "The RDS database password"
   type        = string
-  sensitive   = true
+}
+
+variable "db_name" {
+  description = "The name of the database"
+  type        = string
 }
 
 variable "vpc_security_group_ids" {
-  description = "VPC security group IDs for RDS DB instance"
+  description = "Security group IDs to associate with the DB instance"
   type        = list(string)
 }
 
 variable "publicly_accessible" {
-  description = "DB instance public access"
+  description = "Whether the DB instance is publicly accessible"
   type        = bool
+}
+
+variable "db_parameter_group_name" {
+  description = "The DB parameter group name"
+  type        = string
+}
+
+variable "db_identifier" {
+  description = "The DB instance identifier"
+  type        = string
+}
+
+variable "multi_az" {
+  description = "Whether to create a multi-AZ deployment"
+  type        = bool
+  default     = false
+}
+
+variable "backup_retention_period" {
+  description = "The number of days to retain backups"
+  type        = number
+  default     = 7
+}
+
+variable "storage_type" {
+  description = "The storage type for the DB instance"
+  type        = string
+  default     = "gp2"
+}
+
+variable "apply_immediately" {
+  description = "Whether to apply changes immediately"
+  type        = bool
+  default     = true
+}
+
+variable "db_storage" {
+  description = "The allocated storage (in gigabytes) for the DB instance"
+  type        = number
+}
+
+variable "instance_class" {
+  description = "The instance class for the DB instance"
+  type        = string
+}
+
+variable "allowed_cidr_blocks" {
+  type = list(string)
 }

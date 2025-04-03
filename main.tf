@@ -43,8 +43,8 @@ module "rds" {
   subnet_ids              = [module.vpc.subnet_1a_id, module.vpc.subnet_1b_id]
   db_parameter_group_name = "rds-parameter-group"
   db_family               = "postgres13"
-  db_identifier           = "practicallab4-db"
-  db_engine_version       = "13.7"
+  db_identifier           = "practicallab9-db"
+  db_engine_version       = "15.12"
   db_instance_class       = "db.t3.micro"
   db_storage             = 20
   db_username            = "admin"

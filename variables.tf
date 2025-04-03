@@ -22,3 +22,13 @@ variable "instance_type" {
   description = "EC2 instance Type"
   type        = string
 }
+
+variable "db_engine_version" {
+  description = "RDS Instance Type"
+  type = string
+}
+
+variable "key_name" {
+  description = "EC2 instance key name"
+  type = string
+}

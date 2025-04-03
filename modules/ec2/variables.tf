@@ -21,5 +21,5 @@ variable "security_group_id" {
 variable "key_name" {
   description = "Name of the SSH key pair to associate with the instance"
   type        = string
-  default     = ""
+  default     = "conestoga-pg1-ec2"
 }

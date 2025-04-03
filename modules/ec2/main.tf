@@ -1,4 +1,4 @@
-resource "aws_instance" "practicallab4_ec2_server" {
+resource "aws_instance" "practicallab9_ec2_server" {
   ami                    = var.ami_id
   instance_type          = var.instance_type
   subnet_id              = var.subnet_id
@@ -14,6 +14,6 @@ resource "aws_instance" "practicallab4_ec2_server" {
   EOF
 
   tags = {
-    Name = "PracticalLab4-EC2-Server"
+    Name = "PracticalLab9-EC2-Server"
   }
 }

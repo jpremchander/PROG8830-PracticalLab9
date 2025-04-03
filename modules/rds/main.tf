@@ -33,4 +33,3 @@ resource "aws_db_instance" "postgres_db" {
     Name = var.db_identifier
   }
 }
-
